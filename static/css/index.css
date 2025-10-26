@@ -1,0 +1,23 @@
+a {
+	color: gray;
+	text-decoration: none;
+}
+
+.logingLink {
+	color: #CA7DF9;
+	display: block;
+	background-color: #2B303A;
+	border: solid 2px #CA7DF9;
+	height: 20px;
+	width: 200px;
+	border-radius: 10px;
+	color: #FEFEFF;
+}
+
+.foxchatnapis {
+	color: #CA7DF9;
+	width: 100%;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 40px;
+}

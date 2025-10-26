@@ -1,0 +1,30 @@
+.leftpanel {
+	width: 200px;
+	height: 100vh;
+	border-right: solid 2px #CA7DF9;
+}
+
+.info {
+	padding: 10px;
+	border-bottom: solid 2px #CA7DF9;
+	display:flex;
+	align-items: center;
+}
+
+.logoutbutton {
+	margin: auto;
+	display: block;
+	border: solid 2px #CA7DF9;
+	border-radius: 25px;
+	height: 35px;
+	width: 100px;
+	background-color: #2B303A;
+	color: #CA7DF9;
+	transition-duration: 0.35s;
+}
+
+.logoutbutton:hover {
+	cursor: pointer;
+	color: #5DA271;
+	border-color: #5DA271;
+}
