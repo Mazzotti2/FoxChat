@@ -12,7 +12,7 @@ def loginHandler():
     id_id = login(username, password)
 
     if id_id > 0:
-        return "<script> window.location.href = 'http://127.0.0.1:5000/chat' </script>"
+        return "<script> window.location.href = '/chat' </script>"
     else:
         return "niezalogowano"
 
@@ -26,7 +26,7 @@ def registerHandler():
         id_id = login(username, password)
 
         if id_id > 0:
-            return "<script> window.location.href = 'http://127.0.0.1:5000/chat' </script>"
+            return "<script> window.location.href = '/chat' </script>"
         else:
             return "niezalogowano"
     else:
