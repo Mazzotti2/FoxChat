@@ -3,9 +3,9 @@
 <html lang = "pl">
   <head>
     <title>FoxChat login</title>
-		<link rel = "stylesheet" href = "global.css">
-    <link rel = "stylesheet" href = "loging.css">
-    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+		<link rel = "stylesheet" href = "{{ url_for('static', filename='css/global.css') }}">
+    <link rel = "stylesheet" href = "{{ url_for('static', filename='css/loging.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/logo.png') }}">
   </head>
   <body>
     <header>

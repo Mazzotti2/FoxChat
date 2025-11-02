@@ -3,9 +3,9 @@
 <html lang = "pl">
   <head>
     <title>FoxChat rejestracja</title>
-		<link rel = "stylesheet" href = "global.css">
-    <link rel = "stylesheet" href = "rejestracja.css">
-    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+		<link rel = "stylesheet" href = "{{ url_for('static', filename='css/global.css') }}">
+    <link rel = "stylesheet" href = "{{ url_for('static', filename='css/rejestracja.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/logo.png') }}">
     <script src = "validation.js"></script>
   </head>
   <body>

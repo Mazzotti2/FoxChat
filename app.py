@@ -4,8 +4,7 @@ from connect import *
 app = Flask(__name__)
 id_id = -1
 
-
-@app.route("/api/login")
+@app.route("/api/login", methods = ["POST"])
 def loginHandler():
     username = request.form.get("login")
     password = request.form.get("haslo")
@@ -13,11 +12,11 @@ def loginHandler():
     id_id = login(username, password)
 
     if id_id > 0:
-        return "<script> window.location.href = 'http://127.0.0.1:5500/user_main.html' </script>"
+        return "<script> window.location.href = 'http://127.0.0.1:5000/chat' </script>"
     else:
         return "niezalogowano"
 
-@app.route("/api/register")
+@app.route("/api/register", methods = ["POST"])
 def registerHandler():
     data = request.get_json()
     username = data.get("login")
@@ -27,12 +26,12 @@ def registerHandler():
         id_id = login(username, password)
 
         if id_id > 0:
-            return "<script> window.location.href = 'http://127.0.0.1:5500/user_main.html' </script>"
+            return "<script> window.location.href = 'http://127.0.0.1:5000/chat' </script>"
         else:
             return "niezalogowano"
     else:
         return "niezarejestrowano"
-    
+
 @app.route("/")
 def homePage():
     return render_template("index.html")

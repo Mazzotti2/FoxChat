@@ -3,14 +3,14 @@
 <html lang = "pl">
   <head>
     <title>User</title>
-		<link rel = "stylesheet" href = "global.css">
-    <link rel = "stylesheet" href = "user_main.css">
-    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+		<link rel = "stylesheet" href = "{{ url_for('static', filename='css/global.css') }}">
+    <link rel = "stylesheet" href = "{{ url_for('static', filename='css/user_main.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/logo.png') }}">
   </head>
   <body>
     <aside class = "leftpanel">
       <div class = "info">
-        <img src = "assets/logo.png"/>
+        <img src = "{{ url_for('static', filename='assets/logo.png') }}"/>
         <button class = "logoutbutton">Wyloguj</button>
       </div>
 

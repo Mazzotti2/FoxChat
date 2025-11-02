@@ -3,9 +3,9 @@
 <html>
   <head>
     <title>FoxChat</title>
-		<link rel="stylesheet" href="{{ url_for('static/css', filename='global.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static/css', filename='index.css') }}">
-    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/logo.png') }}">
   </head>
   <body>
     <header>
@@ -13,11 +13,11 @@
         <h1 class = "foxchatnapis">FoxChat - Strona Główna</h1>
 
         <div class = "rejestracja">
-          <a href = "rejestracja.html">Zarejestruj się</a>
+          <a href = "register">Zarejestruj się</a>
         </div>
 
         <div class = "logowanie">
-          <a href = "loging.html" class = "logingLink">Zaloguj się</a>
+          <a href = "login" class = "logingLink">Zaloguj się</a>
         </div>
       </nav>
     </header>
