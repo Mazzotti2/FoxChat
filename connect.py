@@ -8,7 +8,7 @@ def login(username, password):
 
 	cursor = my_dtb.cursor()
 
-	sql = "SELECT id FROM foxchat.users where username = %s and password = %s;"
+	sql = "SELECT id FROM users where username = %s and password = %s;"
 	val = (username, password)
 	cursor.execute(sql, val)
 
