@@ -26,3 +26,25 @@ async function validate_register(event) {
 		alert("Hasła nie są identyczne!")
 	}
 } 
+
+async function validate_login(event) {
+	event.preventDefault()
+
+	const login = document.getElementById("loginid").value
+	const haslo = document.getElementById("hasloid").value
+
+	const res = await fetch("/api/login", {
+			method: "POST",
+			headers: {"Content-Type":"application/json"},
+			credentials: "include",
+			body: JSON.stringify({login, haslo})
+		})
+
+		const data = await res.json()
+		if (data.status == "success") {
+			window.location.href = "/chat"
+		}
+		else {
+			alert(data.message)
+		}
+}
