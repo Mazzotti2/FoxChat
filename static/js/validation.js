@@ -15,7 +15,12 @@ async function validate_register(event) {
 		})
 
 		const data = await res.json()
-		window.location.href = "/chat"
+		if (data.status === "success") {
+			window.location.href = "/chat"
+		}
+		else {
+			alert(data.message)
+		}
 	}
 	else {
 		alert("Hasła nie są identyczne!")

@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from connect import *
+import json
 
 app = Flask(__name__)
 id_id = -1
@@ -12,9 +13,20 @@ def loginHandler():
     id_id = login(username, password)
 
     if id_id > 0:
-        return "<script> window.location.href = '/chat' </script>"
+        response = {
+            "status": "success",
+            "user_id": id_id,
+            "username": username
+        }
+
+        return json.dumps(response)
     else:
-        return "niezalogowano"
+        response = {
+            "status": "failure",
+            "message": "Invalid username or password"
+        }
+
+        return json.dumps(response)
 
 @app.route("/api/register", methods = ["POST"])
 def registerHandler():
@@ -26,11 +38,27 @@ def registerHandler():
         id_id = login(username, password)
 
         if id_id > 0:
-            return "<script> window.location.href = '/chat' </script>"
+            response = {
+                "status": "success",
+                "user_id": id_id,
+                "username": username
+            }
+
+            return json.dumps(response)
         else:
-            return "niezalogowano"
+            response = {
+                "status": "failure",
+                "message": "User registration succeeded but login failed"
+            }
+
+            return json.dumps(response)
     else:
-        return "niezarejestrowano"
+        response = {
+            "status": "failure",
+            "message": "Registeration failed"
+        }
+
+        return json.dumps(response)
 
 @app.route("/")
 def homePage():
