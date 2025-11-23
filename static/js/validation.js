@@ -16,6 +16,8 @@ async function validate_register(event) {
 
 		const data = await res.json()
 		if (data.status === "success") {
+			localStorage.setItem("username", data.username)
+			localStorage.setItem("user_id", data.user_id)
 			window.location.href = "/chat"
 		}
 		else {
@@ -42,6 +44,8 @@ async function validate_login(event) {
 
 		const data = await res.json()
 		if (data.status == "success") {
+			localStorage.setItem("username", data.username)
+			localStorage.setItem("user_id", data.user_id)
 			window.location.href = "/chat"
 		}
 		else {

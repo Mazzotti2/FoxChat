@@ -6,12 +6,17 @@
 		<link rel = "stylesheet" href = "{{ url_for('static', filename='css/global.css') }}">
     <link rel = "stylesheet" href = "{{ url_for('static', filename='css/user_main.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/logo.png') }}">
+		<script src = "{{ url_for('static', filename='js/username.js') }}"></script>
+		
   </head>
   <body>
     <aside class = "leftpanel">
       <div class = "info">
-        <img src = "{{ url_for('static', filename='assets/logo.png') }}"/>
-        <button class = "logoutbutton">Wyloguj</button>
+				<div class = "info_inside">
+        	<img src = "{{ url_for('static', filename='assets/logo.png') }}"/>
+        	<button class = "logoutbutton">Wyloguj</button>
+				</div>
+				<span class = "username" id = "username"></span>
       </div>
 
       <div>
@@ -25,5 +30,8 @@
     <footer>
       
     </footer>
+		<script>
+			hello()
+		</script>
   </body>
 </html>

@@ -7,8 +7,17 @@
 .info {
 	padding: 10px;
 	border-bottom: solid 2px #CA7DF9;
+}
+
+.info_inside {
 	display:flex;
 	align-items: center;
+}
+
+.username {
+	color: #CA7DF9;
+	margin-top: 5px;
+	display:block;
 }
 
 .logoutbutton {
