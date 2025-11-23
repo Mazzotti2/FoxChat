@@ -7,10 +7,12 @@ id_id = -1
 
 @app.route("/api/login", methods = ["POST"])
 def loginHandler():
-    username = request.form.get("login")
-    password = request.form.get("haslo")
+    data = request.get_json()
+    username = data.get("login")
+    password = data.get("haslo")
 
     id_id = login(username, password)
+    print(username, password, id_id)
 
     if id_id > 0:
         response = {

@@ -1,0 +1,1 @@
+release = "serwer" #local albo serwer

@@ -1,7 +1,11 @@
 import mysql.connector
+from config import *
 
 def connect():
-	return mysql.connector.connect(host = "FoxChatOfficial.mysql.pythonanywhere-services.com", database = "FoxChatOfficial$foxchat", user = "FoxChatOfficial", password = "Admin@1234")
+	if release == "serwer":
+		return mysql.connector.connect(host = "FoxChatOfficial.mysql.pythonanywhere-services.com", database = "FoxChatOfficial$foxchat", user = "FoxChatOfficial", password = "Admin@1234")
+	elif release == "local":
+		return mysql.connector.connect(host = "localhost", database = "foxchat", user = "root", password = "root")
 
 def login(username, password):
 	my_dtb = connect()
