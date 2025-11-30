@@ -1,1 +1,1 @@
-release = "local" #local albo serwer
+release = "serwer" #local albo serwer
